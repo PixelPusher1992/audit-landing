@@ -1,0 +1,20 @@
+//every font should be in separate folder
+$font-path: '../fonts';
+
+@mixin include-font($family-name, $f-type, $f-style: normal, $f-weight: normal) {
+  @font-face {
+    font-family: $family-name;
+    src: url('#{$font-path}/#{$family-name}/#{$family-name}-#{$f-type}.eot');
+    src: url('#{$font-path}/#{$family-name}/#{$family-name}-#{$f-type}.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$family-name}/#{$family-name}-#{$f-type}.woff') format('woff'),
+    url('#{$font-path}/#{$family-name}/#{$family-name}-#{$f-type}.ttf') format('truetype'),
+    url('#{$font-path}/#{$family-name}/#{$family-name}-#{$f-type}.svg##{$family-name}-#{$f-type}') format('svg');
+    font-style: $f-style;
+    font-weight: $f-weight;
+  }
+}
+//example
+@include include-font('MyriadPro-Cond', 'Regular');
+@include include-font('MyriadPro', 'Regular');
+@include include-font('MyriadPro', 'Semibold', normal, 600);
+@include include-font('PT_Sans', 'Regular');

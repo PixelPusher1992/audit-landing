@@ -1,0 +1,118 @@
+@import "imports";
+
+/* Main ------------------------------------------------------- */
+:root, body {
+  font-size: $my-base-font-size;
+}
+body {
+  background: $body-color;
+  color: $text-color;  //cause of dark bg
+}
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Header ------------------------------------------------------- */
+.header {
+  @media screen and (min-width: $screen-md-min) {
+    margin-top: 21px;
+  }
+  &__wrap {
+    background: $header-bg;
+    font-size: 1.5rem;
+    @include shadow;
+    text-align: center;
+    @include padding-vertical(.5em, .5em);
+    @include margin-horizontal(-$grid-gutter-width / 2, -$grid-gutter-width / 2);
+    margin-bottom: 1em;
+    @media screen and (min-width: $screen-sm-min) {
+      border-radius: .2em;
+      padding: 0.3em 0.75em;
+      @include margin-horizontal($grid-gutter-width / 2, $grid-gutter-width / 2);
+    }
+  }
+  &__logo {
+    width: 225px;
+    @include center-block;
+    @media screen and (min-width: $screen-sm-min) {
+      float: left;
+      margin-top: 15px;
+    }
+    @media screen and (min-width: $screen-md-min) {
+      width: auto;
+      margin-top: 7px;
+    }
+  }
+  &__phones {
+    float: right;
+    &-text {
+      @include font($brand-primary, 1.5rem);
+      line-height: 1;
+    }
+    &-link {
+      @include font(#f2f2f2, 1.5rem);
+      display: inline-block;
+      line-height: 1;
+      letter-spacing: 1px;
+      border-bottom: 1px solid transparent;
+      transition: all $time-animation;
+      @include hover-focus-active-state {
+        color: #f2f2f2;
+        text-decoration: none;
+        border-bottom-color: #f2f2f2;
+      }
+      & + & {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $section-bg-color;
+  @include font($white, $my-font-size-h3);
+  @include padding-vertical(0.75em);
+  @media screen and (min-width: $screen-tablet) {
+    @include padding-vertical(2.5em);
+  }
+
+  &__col {
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    @media screen and (max-width: $screen-tablet - 1) {
+      text-align: center;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__logo {
+    margin-bottom: 0.75em;
+  }
+  &__link {
+    color: $white;
+    letter-spacing: 1px;
+    border-bottom: 1px solid transparent;
+    transition: all $time-animation;
+    @include hover-focus-active-state {
+      color: $white;
+      text-decoration: none;
+      border-bottom-color: $white;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      margin-bottom: 0.75em;
+      display: inline-block;
+    }
+  }
+  &__text {
+    letter-spacing: 1px;
+  }
+}

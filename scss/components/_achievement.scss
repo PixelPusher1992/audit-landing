@@ -1,0 +1,54 @@
+.achievement {
+  margin-bottom: 80px;
+  &__item {
+    @include font($white, $my-font-size-h5);
+    @media screen and (max-width: $screen-tablet - 1) {
+      @include make-row;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      display: table;
+      width: 100%;
+      font-size: $my-font-size-h3;
+    }
+    & + & {
+      margin-top: 2em;
+    }
+    &-icon {
+      background: $brand-primary;
+      text-align: center;
+      border-radius: 0.3em;
+      @include shadow;
+      margin-bottom: 0.3em;
+      @include padding-vertical(1em);
+    }
+    &-text {
+      background: $gray-dark;
+      border-radius: 0.3em;
+      @include shadow;
+      padding: 0.5em 0.75em;
+      line-height: 1.2;
+    }
+  }
+  $achiv-col-gap: 60px;
+  &__col {
+    @include make-xs-column($grid-columns, $achiv-col-gap);
+    @include make-sm-column($grid-columns / 4 * 3, $achiv-col-gap);
+    @media screen and (min-width: $screen-tablet) {
+      display: table-cell;
+      vertical-align: middle;
+      float: none;
+    }
+
+    &-icon {
+      @include make-xs-column($grid-columns, $achiv-col-gap);
+      @include make-sm-column($grid-columns / 4, $achiv-col-gap);
+      @media screen and (min-width: $screen-tablet) {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+        padding-right: 0;
+        min-width: 210px;
+      }
+    }
+  }
+}

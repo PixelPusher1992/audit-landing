@@ -1,0 +1,57 @@
+/* Path ----------------------------------------- */
+$path: "..";
+$icon-font-path: "#{$path}/#{$path}/fonts/";
+$img-path: "../img";
+//$fa-font-path: "#{$path}/#{$path}/fonts";
+
+/* Colors ----------------------------------------- */
+$black: #000000;
+$white: #ffffff;
+$body-color: #20282f;
+$header-bg: #3a3a3a;
+$brand-primary: #5098a8;
+$brand-primary-light: #75b2bf;
+$brand-primary-dark: #3c727e;
+$text-color: $white;
+$section-bg-color: #545454;
+$gray-dark: #6a6a6a;
+
+/* Grids ----------------------------------------- */
+$container-large-desktop: 1030px;
+
+/* Typography ----------------------------------------- */
+$font-family-sans-serif: "MyriadPro-Cond", Arial, sans-serif;
+$font-family-heading: "MyriadPro", Arial, sans-serif;
+$font-family-content: "PT_Sans", Arial, sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+
+$font-size-base: 14px;
+$my-base-font-size: 1rem;
+$font-size-large: ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small: ceil(($font-size-base * 0.85)); // ~12px
+
+$font-size-h1: floor(($font-size-base * 2.6)); // ~36px
+$my-font-size-h1: $my-base-font-size * 2.25; // ~2.25rem = 36px
+
+$font-size-h2: floor(($font-size-base * 2.15)); // ~30px
+$font-size-h2: $my-base-font-size * 1.75; // 1.75rem = 28px
+
+$font-size-h3: ceil(($font-size-base * 1.7)); // ~24px
+$my-font-size-h3: $my-base-font-size * 1.5; // ~1.5rem = 24px
+
+$font-size-h4: ceil(($font-size-base * 1.25)); // ~18px
+$my-font-size-h4: $my-base-font-size * 1.25; // 1.25rem = 20px
+
+$font-size-h5: $font-size-base;
+$my-font-size-h5: $my-base-font-size * 1.125; // 1.125rem = 18px
+
+$font-size-h6: ceil(($font-size-base * 0.85)); // ~12px
+
+/* Modals ------------------------------------------------------- */
+$modal-backdrop-opacity: 0.7;
+
+/* Others ----------------------------------------- */
+$time-animation: 0.3s;
+$title-icon-width: 175px;
+$title-padding: 1em;
+$md-title-padding: 0.5em;

@@ -1,0 +1,5 @@
+.process {
+  @media screen and (max-width: $screen-sm-min - 1) {
+    @include margin-horizontal(1em);
+  }
+}

@@ -1,0 +1,40 @@
+.advantages {
+  margin-bottom: 5em;
+
+  &__wrap {
+    @media screen and (max-width: $screen-phone) {
+      width: 100%;
+
+    }
+    @media screen and (min-width: $screen-phone) {
+      &:nth-of-type(2n+1) {
+        clear: left;
+      }
+    }
+    @media screen and (min-width: $screen-tablet) {
+      &:nth-of-type(2n+1) {
+        clear: none;
+      }
+      &:nth-of-type(3n+1) {
+        clear: left;
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 25px;
+    text-align: center;
+    &-icon {
+      @include square(175px);
+      background: $brand-primary;
+      text-align: center;
+      border-radius: 0.25em;
+      @include shadow;
+      display: inline-block;
+      line-height: 175px;
+    }
+    &-text {
+      @include font($white, $my-font-size-h5);
+      margin-top: 0.5em;
+    }
+  }
+}

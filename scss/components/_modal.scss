@@ -1,0 +1,65 @@
+.modal {
+  &__box {
+    border-radius: 0.25em;
+    overflow: hidden;
+
+    .form {
+      padding: 32px;
+    }
+  }
+  &__body {
+    background: #595959;
+  }
+  &__title {
+    position: relative;
+    font-family: $font-family-content;
+    text-transform: uppercase;
+    text-align: center;
+    @include font($white, $font-size-h2);
+    box-shadow: 0 0 7px $black;
+    padding: 0.5em;
+    background: #444444;
+    @media screen and (min-width: $screen-tablet) {
+      @include padding-horizontal(1em);
+    }
+    @media screen and (min-width: $screen-desktop) {
+      font-size: $my-font-size-h1;
+    }
+    &:before {
+      @media screen and (min-width: $screen-tablet) {
+        content: '';
+        border-top: 1px solid $white;
+        display: block;
+        @include absoluteLocation(50% 2em false 2em);
+      }
+      @media screen and (min-width: $screen-desktop) {
+        left: 1.5em;
+        right: 1.5em;
+      }
+    }
+
+    &-text {
+      background: #444444;
+      padding: 0 1em;
+      position: relative;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    @include absoluteLocation(0 0 false false);
+    background: $brand-primary;
+    color: $white;
+    @include square(32px);
+    line-height: 32px;
+    text-align: center;
+    font-size: 42px;
+    overflow: hidden;
+    &-text {
+      transition: transform $time-animation;
+      display: block;
+    }
+    &:hover &-text {
+      transform: rotate(180deg);
+    }
+  }
+}

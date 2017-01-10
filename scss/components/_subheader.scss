@@ -1,0 +1,66 @@
+.subheader {
+  margin-bottom: 40px;
+  &__title {
+    width: 100%;
+    @include center-block;
+    @include font($text-color, $my-font-size-h4);
+    padding: 0.5em;
+    text-transform: uppercase;
+    text-align: center;
+    background: $section-bg-color;
+    @include shadow;
+    border-radius: 0.25rem;
+    margin-bottom: 1em;
+    position: relative;
+    @media screen and (min-width: $screen-sm-min) {
+      width: 600px;
+      font-size: $my-font-size-h3;
+      &:before {
+        content: '';
+        border-top: 1px solid white;
+        display: block;
+        position: absolute;
+        left: 0.5em;
+        right: 0.5em;
+        top: 50%;
+      }
+    }
+    @media screen and (min-width: $screen-md-min) {
+      width: 820px;
+      font-size: $my-font-size-h1;
+    }
+    &--full {
+      width: auto;
+      @media screen and (max-width: $screen-sm-min - 1) {
+        border-radius: 0;
+        @include margin-horizontal(-$grid-gutter-width / 2);
+      }
+    }
+  }
+  &__bg {
+    position: relative;
+    z-index: 1;
+    @include padding-horizontal(0.5em);
+    background: $section-bg-color;
+  }
+  &__content {
+    width: 100%;
+    background: $section-bg-color;
+    @include shadow;
+    font-family: $font-family-content;
+    @include font($text-color, 1rem);
+    padding: 1em 1.5em;
+    border-radius: 0.2em;
+    @include center-block;
+    @media screen and (min-width: $screen-sm-min) {
+      font-size: $my-font-size-h5;
+      width: auto;
+      @include margin-horizontal(15px, 15px);
+    }
+    @media screen and (min-width: $screen-md-min) {
+      width: 725px;
+      font-size: 1.375rem;
+      @include center-block;
+    }
+  }
+}

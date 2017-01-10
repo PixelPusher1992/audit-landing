@@ -1,0 +1,14 @@
+.stat {
+  padding-top: 0 !important;
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top: 25px !important;
+  }
+  @media screen and (min-width: $screen-md-min) {
+    padding: 10px 0 45px !important;
+  }
+  &__item {
+    @include margin-horizontal($grid-gutter-width / 2);
+    width: auto;
+    background: $brand-primary;
+  }
+}

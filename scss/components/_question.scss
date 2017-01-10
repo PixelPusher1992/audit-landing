@@ -1,0 +1,57 @@
+.question {
+  @include padding-vertical(20px, 45px);
+  margin-bottom: 50px;
+  @media screen and (min-width: $screen-desktop) {
+    margin-bottom: 90px;
+  }
+
+  &__title {
+    font-size: $my-font-size-h4;
+    font-family: $font-family-heading;
+    font-weight: 600;
+    margin-bottom: 1em;
+    @media screen and (min-width: $screen-tablet) {
+      font-size: $font-size-h2;
+    }
+    @media screen and (min-width: $screen-desktop) {
+      font-size: $font-size-h1;
+    }
+  }
+
+  &__btn {
+    @include epages-btn(0.75em, 0.5em, $my-font-size-h4);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0.5em;
+    @media screen and (min-width: $screen-tablet) {
+      font-size: $font-size-h2;
+    }
+    @media screen and (min-width: $screen-desktop) {
+      font-size: $font-size-h1;
+      max-width: 450px;
+      @include padding-vertical(0.65em);
+    }
+  }
+
+  &__icon {
+    font-size: 3em;
+    font-family: $font-family-heading;
+    line-height: 43px; /* hexagon height */
+    z-index: 5;
+    &-text {
+      z-index: 6;
+      position: relative;
+    }
+  }
+  &__hex {
+    position: relative;
+  }
+  &__line {
+    content: '';
+    border-top: 2px solid $white;
+    display: block;
+    margin: -1px 0 0;
+    width: 100%;
+    @include absoluteLocation(50% false false 0);
+  }
+}

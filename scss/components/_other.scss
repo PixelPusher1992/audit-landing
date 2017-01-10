@@ -1,0 +1,137 @@
+.epages-btn {
+  @include epages-btn(0.5em, 0.5em, $my-font-size-h3);
+}
+
+/* Title with icon ------------------------------------------------------- */
+.epages {
+  &__title {
+    background: $header-bg;
+    text-transform: uppercase;
+    @include font($white, $my-font-size-h5);
+    padding: $title-padding 0;
+    @include shadow;
+    font-family: $font-family-heading;
+    font-weight: 600;
+    position: relative;
+    @media screen and (min-width: $screen-tablet) {
+      font-size: $my-font-size-h3;
+      margin-bottom: 1em;
+      br {
+        display: none;
+      }
+    }
+    @media screen and (min-width: $screen-desktop) {
+      font-size: 2.125rem;
+      padding: $md-title-padding 0;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      &--icon-left .container {
+        position: relative;
+        padding-left: $title-icon-width + 20px;
+      }
+      &--icon-right .container {
+        position: relative;
+        padding-right: $title-icon-width + 20px;
+      }
+      &--icon-left .epages__icon {
+        left: $grid-gutter-width / 2;
+      }
+      &--icon-right .epages__icon {
+        right: $grid-gutter-width / 2;
+      }
+    }
+  }
+  &__icon {
+    margin-bottom: 5px;
+    @media screen and (min-width: $screen-tablet) {
+      @include size($title-icon-width, 150px);
+      line-height: 150px;
+      background: $header-bg;
+      top: -$title-padding;z-index: 1;
+      margin-bottom: 0;
+      position: absolute;
+      @include border-bottom-radius(0.25em);
+    }
+    @media screen and (min-width: $screen-desktop) {
+      top: -$md-title-padding;
+    }
+  }
+
+  &__section {
+    background: $section-bg-color;
+    @include padding-vertical(20px, 15px);
+    @include shadow;
+    @include border-bottom-radius(0.25em);
+    @media screen and (min-width: $screen-tablet) {
+      @include padding-vertical(60px, 40px);
+      border-radius: 0.25em;
+    }
+    &--no-bg {
+      background: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.graph-bg {
+  background: $section-bg-color url('#{$img-path}/feedback-bg.png') center center;
+  @include shadow;
+}
+.achive-bg {
+  background: $section-bg-color url('#{$img-path}/achive-bg.png') center center;
+  @include shadow;
+}
+.process-bg {
+  background: $section-bg-color url('#{$img-path}/process-bg.png') center center;
+  @include shadow;
+}
+
+
+/* this is generated on http://csshexagon.com/ ---------------------- */
+.hexagon {
+  position: relative;
+  width: 75px;
+  height: 43.30px;
+  background-color: $section-bg-color;
+  margin: 21.65px auto;
+  border-left: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 53.03px;
+  height: 53.03px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 8.9835px;
+}
+
+.hexagon:before {
+  top: -26.5165px;
+  border-top: solid 2.8284px #ffffff;
+  border-right: solid 2.8284px #ffffff;
+}
+
+.hexagon:after {
+  bottom: -26.5165px;
+  border-bottom: solid 2.8284px #ffffff;
+  border-left: solid 2.8284px #ffffff;
+}
+
+.shadowed {
+  @include shadow;
+}
+
+
+
+.icon {
+  width: 140px;
+  height: 111px;
+  @include vertical-center;
+}
